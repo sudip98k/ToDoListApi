@@ -33,3 +33,22 @@
 
 ### DeleteTask: This endpoint will be deleted the task by sending the task identifier and also from the database.
 ![Alt text](images/delete_task.png)
+### File Structure
+|--- .vscode<br>
+|--- config<br>
+|--- |--- middleware<br>
+|--- |--- mongoose<br>
+|--- controllers<br>
+|--- |--- todoController<br>
+|--- |--- userController<br>
+|--- models<br>
+|--- |--- TodoModel<br>
+|--- |--- User<br>
+|--- routes<br>
+|--- |--- todo<br>
+|--- |--- user<br>
+|--- gitignore<br>
+|--- index.js<br>
+|--- package-lock.json<br>
+|--- package.json<br>
+|--- Readme.md<br>
