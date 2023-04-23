@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 
-//connect to DB
+//Method for connecting Db
 mongoose.connect('mongodb://127.0.0.1/ToDoListApi', { useNewUrlParser: true ,useUnifiedTopology: true });
 const db = mongoose.connection;
 

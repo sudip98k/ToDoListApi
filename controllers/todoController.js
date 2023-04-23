@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Todo=require('../models/ToDoModel');
-
+//Controller function for creating a new ToDo task
 module.exports.createTask=async function(req,res){
      const {task,desc,active}=req.body;
     const todo=await Todo.create({task,desc,active});
@@ -10,7 +10,7 @@ module.exports.createTask=async function(req,res){
         message:"Task is created successfully"
     })
 }
-
+//Controller function for updating tasks
 module.exports.updateTask = async function(req,res){
     const {task,desc,active}=req.body;
     const TaskExist =await Todo.findOne({_id:req.params.id})
@@ -33,7 +33,7 @@ module.exports.updateTask = async function(req,res){
     }
 }
 
-
+//Controller function for deleting the task
 module.exports.deleteTask =async function(req,res){
     //const findId=await Todo.findById({_id:req.params.id});
     await Todo.deleteOne({_id:req.params.id}).then(function(result){
@@ -51,7 +51,7 @@ module.exports.deleteTask =async function(req,res){
     })
 
 }
-
+//Controller function for retrieveing the task
 module.exports.getTask =async function(req,res){
     const getTask =await Todo.findOne({_id:req.params.id});
     if(getTask){
